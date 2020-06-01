@@ -26,7 +26,7 @@ module counter
 			 if (dcrm)
 					data <= data - 12'd1; //декремент на 1
 			 else if (shift_right1)
-					data= {data[11], data[10:0]}; //сдвиг вправо на 1
+				 data= {data[0], data[11:1]}; //сдвиг вправо на 1
 			 else if (shift_left2)
 					data={data[9:0],data[11:10]}; //сдвиг влево на 2
 			end
